@@ -1,4 +1,7 @@
-default: build
+default: dog
+
+dog:
+	dune exec bin/dog.exe -- dot/a.dot
 
 run:
 	dune exec bin/main.exe
@@ -24,4 +27,4 @@ uninstall:
 clean:
 	dune clean
 
-.PHONY: default build install uninstall test clean
+.PHONY: default dog build install uninstall test clean

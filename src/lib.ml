@@ -9,9 +9,7 @@ let%expect_test _ =
   print_endline "Hello, world!" ;
   [%expect {| Hello, world! |}]
 
-let dot_read path =
-  let content = In_channel.read_all path in
-  Dot.parse_dot_ast content
+(* let dot_read path = Dot.parse_dot_ast path *)
 
-(* let dot_process () = () *)
+let dot_process path = Pack.Digraph.parse_dot_file path
 (* let dot_write () = () *)
