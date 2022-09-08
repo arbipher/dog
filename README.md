@@ -1,5 +1,9 @@
 # DOG is an extension for DOT
 
+DOG = DOT + DOT-Action
+
+DOT-Action: script of human actions
+
 A programmable way to process DOT file.
 
 TODO:

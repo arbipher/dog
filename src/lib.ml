@@ -12,4 +12,12 @@ let%expect_test _ =
 (* let dot_read path = Dot.parse_dot_ast path *)
 
 let dot_process path = Pack.Digraph.parse_dot_file path
+
+(* module DotGraph = Dot.Parse (Builder.I) *)
+
+(* let dot_parse path = DotGraph.parse path *)
 (* let dot_write () = () *)
+
+(* let remove_node _node (_g : Sig.G.t) = () *)
+
+let remove_vertex v g = Pack.Digraph.remove_vertex g v

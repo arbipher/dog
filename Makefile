@@ -3,6 +3,9 @@ default: dog
 dog:
 	dune exec bin/dog.exe -- dot/a.dot
 
+from:
+	dune exec bin/from_test.exe -- dot/a.dot
+
 run:
 	dune exec bin/main.exe
 
