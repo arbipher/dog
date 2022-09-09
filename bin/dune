@@ -1,3 +1,3 @@
 (executables
- (names main dog from_test)
+ (names main dog)
  (libraries mylib))

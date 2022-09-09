@@ -29,9 +29,4 @@ end
 
 module DotOutput = Graphviz.Dot (Display)
 
-let g = DotInput.parse Sys.argv.(1)
-
-let () =
-  Printf.printf "========= BEGIN output graph =========\n" ;
-  DotOutput.output_graph stdout g ;
-  Printf.printf "========= END output graph ========="
+let dot_process path = DotInput.parse path
