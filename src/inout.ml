@@ -1,3 +1,4 @@
+open Core
 open Graph
 module G = Dograph.G
 module B = Builder.P (G)
@@ -6,7 +7,11 @@ module DotInput =
   Dot.Parse
     (B)
     (struct
-      let node id attrs : Dograph.Dot_vertex.t = { id; attrs }
+      let node node_id (attrs : Dot_ast.attr list) : Dograph.Dot_vertex.t =
+        { node_id; attrs = List.map ~f:Dograph.node_attr_of_attr attrs }
+
+      (*  *)
+      (* Dograph.node_attr_of_attr *)
       let edge _ = "a"
     end)
 
