@@ -1,0 +1,19 @@
+digraph D  {
+  graph [bgcolor="lightblue"]
+  graph [label="HGHome"]
+  graph [charset="UTF-8"]
+
+  subgraph cluster_a {
+    label="Cluster A";
+    node1; node3; node5; node7;
+  }
+
+  A [shape=diamond,fillcolor=yellow][color=black]
+  B [shape=box]
+  C [shape=circle]
+
+  A -> B [style=dashed, color=grey]
+  A -> C [color="black:invis:black"]
+  A -> D [penwidth=5, arrowhead=none]
+
+}

@@ -7,6 +7,7 @@
  (synopsis "the library demo")
  (libraries
   core
+  fmt
   ocamlgraph
   ; ocamldot
   )

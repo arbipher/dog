@@ -1,0 +1,42 @@
+digraph D {
+  label="diagram_label";
+  
+  // should be override
+  bgcolor=red;
+
+  node [color=green];
+  before_subgraph -> green
+
+  subgraph cluster_1 {
+    bgcolor=lightgrey;
+    label="cluster_1";
+  
+    in_subgraph -> green
+    
+    node [color=blue];
+    in_subgraph2 -> blue
+  } ->
+  subgraph test {
+      a -> b -> c;
+  }
+
+  after_subgraph -> green
+  
+  // should override bgcolor
+  bgcolor=pink;
+  
+
+  // subgraph without ID
+  cluster_1 -> 
+  subgraph cluster_2 {
+    // will be ignored
+    label="noname_1";
+    
+    
+    // will affect nodes
+    node [color=white];
+    
+    in_no_id_subgraph -> white;
+    more -> less;
+  };
+}

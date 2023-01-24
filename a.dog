@@ -1,0 +1,17 @@
+digraph G {
+  label="hacking";
+  A [shape=diamond, ];
+  B [shape=box, ];
+  C [shape=circle, ];
+  D;
+  node1;
+  node3;
+  node5;
+  node7;
+  
+  
+  A -> B;
+  A -> C;
+  A -> D;
+  
+  }

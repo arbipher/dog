@@ -1,10 +1,10 @@
 default: dog
 
 dog:
-	dune exec bin/dog.exe -- dot/a.dot
+	dune exec bin/dog.exe -- dot/node_attrs.dot
 
 from:
-	dune exec bin/from_test.exe -- dot/a.dot
+	dune exec bin/from_test.exe -- dot/node_attrs.dot
 
 run:
 	dune exec bin/main.exe
